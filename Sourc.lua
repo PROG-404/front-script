@@ -112,8 +112,8 @@ nowe = false
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "GO SUB TO HIM";
-    Text = "fly gui by me_ozoneYT";
-    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+    Text = "fly gui by discord front_9";
+})
 Duration = 16;
 
 Frame.Active = true -- main = gui
