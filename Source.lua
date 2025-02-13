@@ -126,7 +126,7 @@ nowe = false
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "GO SUB TO HIM";
-    Text = "fly gui by discord front_9";
+    Text = "fly and gui by discord: front_9";
 })
 Duration = 16;
 
