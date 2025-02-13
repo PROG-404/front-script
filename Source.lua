@@ -133,12 +133,12 @@ Duration = 16;
 Frame.Active = true -- main = gui
 Frame.Draggable = true
 
--- تحريك الواجهة
-local moveSpeed = 100 -- سرعة حركة الإطار
+
+local moveSpeed = 100 
 local directionX = math.random(-1, 1)
 local directionY = math.random(-1, 1)
 
--- دالة لتغيير الاتجاه بشكل عشوائي عند الاصطدام بحواف الشاشة
+
 local function changeDirection()
     directionX = math.random(-1, 1)
     directionY = math.random(-1, 1)
@@ -148,11 +148,11 @@ local function changeDirection()
     end
 end
 
--- دالة لتحريك الإطار عبر الشاشة
+
 local function moveFrame(dt)
     Frame.Position = Frame.Position + UDim2.new(0, directionX * moveSpeed * dt, 0, directionY * moveSpeed * dt)
     
-    -- التحقق من الاصطدام بحواف الشاشة وتغيير الاتجاه
+    
     if Frame.Position.X.Offset > Frame.Parent.AbsoluteSize.X - Frame.Size.X.Offset or Frame.Position.X.Offset < 0 then
         directionX = -directionX
     end
