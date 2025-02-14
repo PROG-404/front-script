@@ -133,34 +133,6 @@ Duration = 16;
 Frame.Active = true -- main = gui
 Frame.Draggable = true
 
-
-local moveSpeed = 100 
-local directionX = math.random(-1, 1)
-local directionY = math.random(-1, 1)
-
-
-local function changeDirection()
-    directionX = math.random(-1, 1)
-    directionY = math.random(-1, 1)
-
-    if directionX == 0 and directionY == 0 then
-        directionX = 1
-    end
-end
-
-
-local function moveFrame(dt)
-    Frame.Position = Frame.Position + UDim2.new(0, directionX * moveSpeed * dt, 0, directionY * moveSpeed * dt)
-    
-    
-    if Frame.Position.X.Offset > Frame.Parent.AbsoluteSize.X - Frame.Size.X.Offset or Frame.Position.X.Offset < 0 then
-        directionX = -directionX
-    end
-    if Frame.Position.Y.Offset > Frame.Parent.AbsoluteSize.Y - Frame.Size.Y.Offset or Frame.Position.Y.Offset < 0 then
-        directionY = -directionY
-    end
-end
-
 onof.MouseButton1Down:connect(function()
 
     if nowe == true then
